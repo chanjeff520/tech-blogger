@@ -1,0 +1,1 @@
+const{ model, DataTypes} = require('sequelize');
