@@ -1,6 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
 
-const sequelize = require('../config/conection');
+const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
@@ -13,8 +13,12 @@ Comment.init(
             autoIncrement: true
         },
         text: {
-            type: DataTypes.text,
+            type: DataTypes.TEXT,
             allowNull: false
+        },
+        time_posted: {
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW
         },
         user_id: {
             type: DataTypes.INTEGER,

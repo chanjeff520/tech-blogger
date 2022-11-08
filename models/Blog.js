@@ -19,6 +19,10 @@ Blog.init(
             type: DataTypes.TEXT,
             allowNull: false
           },
+          time_posted: {
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW
+          },
           user_id: {
             type: DataTypes.INTEGER,
             //allowNull: false,
@@ -35,3 +39,5 @@ Blog.init(
         modelName: "blog"
     }
 );
+
+module.exports = Blog;
