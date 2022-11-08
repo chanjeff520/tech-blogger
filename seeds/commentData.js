@@ -1,3 +1,4 @@
+const { builtinModules } = require('module');
 const { join } = require('path')
 const {Comment} = require('../models')
 
@@ -17,4 +18,8 @@ const commentData = [
         user_id: 2,
         blog_id: 1,
     }
-]
+];
+
+const seedComment = () => Comment.bulkCreate(commentData);
+
+module.exports = seedComment;
